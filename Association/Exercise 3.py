@@ -41,16 +41,10 @@ class Building:
             print("Invalid")
         else:
             print(f"Elevator {elevator} is going to floor {distination}")
-    # def fire_alarm(self):
-    #     a=0
-    #     for i in range(self.nElevator):
-    #         # a=0
-    #         print(f"elevator {a+1} go down to basement")
-    #         a+=1
 
-Oodi=Building(1,10,3)
-Oodi.run_elevator(1,3)
-Oodi.run_elevator(4,3)
-Oodi.run_elevator(2,3)
-Oodi.run_elevator(11,4)
-Oodi.fire_alarm()
+    def fire_alarm(self):
+        a=0
+        for i in range(self.nElevator):
+            # a=0
+            print(f"elevator {a+1} go down to basement")
+            a+=1

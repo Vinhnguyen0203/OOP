@@ -30,7 +30,6 @@ class Building:
         self.bottom_floor = bottom_floor
         self.top_floor = top_floor
         self.elevators = [Elevator(bottom_floor, top_floor) for _ in range(num_elevators)]
-
     def run_elevator(self, elevator_number, destination_floor):
         if 0 <= elevator_number < len(self.elevators):
             elevator = self.elevators[elevator_number]
@@ -38,6 +37,7 @@ class Building:
             elevator.go_to_floor(destination_floor)
         else:
             print(f"Elevator {elevator_number} does not exist in the building")
+        print(self.elevators)
 
 if __name__ == "__main__":
     # Create a building with 3 elevators from floor 1 to 10

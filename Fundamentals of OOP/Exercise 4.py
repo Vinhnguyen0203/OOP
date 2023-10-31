@@ -80,6 +80,6 @@ class Race:
 
 phutho=Race("phutho",2000)
 phutho.create_car_times()
-# phutho.timepass()
-# phutho.timepasstime()
-phutho.show_info()
+phutho.timepass()
+phutho.timepasstime()
+# phutho.show_info()
