@@ -20,9 +20,6 @@ class Elevator:
     def floor_up(self,up=1):
         self.floor+=up
         floor_up=self.floor
-        # print(f"you have been in floor {self.floor}")
-        # if self.floor>=self.Tfloor:
-        #     print("you have been in max floor")
         if floor_up < self.Tfloor:
             print(f"you have been gone up {floor_up} ")
         else:
@@ -34,14 +31,13 @@ class Elevator:
             print(f"you have been down {self.floor}")
         else:
             print("you cannot go down because this is basement")
+class Building:
+    def __init__(self,bFloor,tFloor,nElevator):
+        self.bFloor=bFloor
+        self.tFloor=tFloor
+        self.nElevator=nElevator
+    def run_elevator(self,elevator,distination):
+        a=
 
-customer=Elevator(0,50)
-customer.go_to_floor(-1)
-
-
-
-
-
-
-
-
+Oodi=Building(1,10,3)
+Oodi.run_elevator(3,2)
