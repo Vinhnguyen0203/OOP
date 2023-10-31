@@ -5,7 +5,10 @@ class Car:
         self.currentspeed=currentspeed
         self.travelleddistance=travelleddistance
     def show_info(self):
-        return print(f"{self.registrationnumber},{self.maximumspeed},{self.currentspeed},{self.travelleddistance}")
+        return print(f"regis number is '{self.registrationnumber}'\n"
+                     f"maximum speed is {self.maximumspeed}\n"
+                     f"current speed is {self.currentspeed}\n"
+                     f"travelled distance is {self.travelleddistance}")
 
 Audi=Car("ABC-123",142)
 Audi.show_info()

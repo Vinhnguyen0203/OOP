@@ -23,31 +23,31 @@ class Car:
         if result<0:
             result=0
         print(f"the emergy brake is {result}")
-
-
-Audi=Car("ABC-123",142)
-Audi.plusing(30)
-Audi.plusing(70)
-Audi.plusing(50)
-Audi.plusing(-50)
-Audi.show_info()
-Audi.plusing(-50)
-Audi.show_info()
-Audi.plusing(-50)
-Audi.show_info()
-Audi.brake()
-
-
-
-
-
-
-
-
+    def drive(self,hours:int):
+        distance=self.travelleddistance+(self.currentspeed*hours)
+        self.travelleddistance=distance
+        print("the current travelled distance is",distance)
+# Audi=Car("ABC-123",142)
+# Audi.plusing(30)
+# Audi.plusing(70)
+# Audi.plusing(50)
+# Audi.plusing(-50)
+# Audi.show_info()
+# Audi.plusing(-50)
+# Audi.show_info()
+# Audi.plusing(-50)
+# Audi.show_info()
 # Audi.brake()
-# Porche=Car("BCD-456",200,0,0)
-# Porche.show_info()
-# Porche.plusing(30)
-# Porche.plusing(70)
-# Porche.plusing(50)
-# Porche.brake()
+Porche=Car("ABC-456",250,0,2000)
+Porche.plusing(30)
+Porche.show_info()
+Porche.plusing(30)
+Porche.show_info()
+Porche.drive(1.5)
+Porche.drive(2.5)
+Porche.drive(3.5)
+
+
+
+
+

@@ -1,18 +1,23 @@
-class Student:
+class Animal:
     def __init__(self,name):
         self.name=name
-        self.subject=[]
+    def speak(self):
+        pass
+    def print_me(self):
+        print(f"{self.name}")
 
-    def choosing(self,subject:str):
-        return self.subject.append(subject)
-
-trung=Student("Trung")
-trung.choosing("Math")
-trung.choosing("Physics")
-Amir=Student("Amir")
-Amir=Student("Amir")
-Amir.choosing("Physics")
-Timo=Student("Timo")
-Timo.choosing("Math")
-Timo.choosing("History")
-
+class Dog(Animal):
+    def speak(self):
+        pass
+        # print(f"{self.name} wau wau")
+class Meow(Dog):
+    def speak(self):
+        print(f"{self.name} is barking")
+# dog=D
+# dog.speak()
+# dog.print_me()
+# stusy=Meow("heihei")
+# stusy.speak()
+stutsy=Meow("heihei")
+stutsy.speak()
+stutsy.print_me()

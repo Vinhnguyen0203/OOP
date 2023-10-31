@@ -1,34 +1,49 @@
-# class Visitor:
-#     def __int__(self,name:str,height:int)   :
-#         self.name=name
-#         self.height=height
-#     def __str__(self):
-#         return self.name
-#
-# class Attractions:
-#     def __init__(self):
-#         self.visitors=[]
-#     def store(self,visitor:Visitor):
-#         self.visitors.append(visitor)
-#     def checking(self,visitor,height):
-#
-#     def printing(self):
-#         for visitor in self.visitors:
-#             print(visitor)
-#         print(f"there are {len(self.visitors)} visitors")
-#
-#
-class Car:
-    def __init__(self,regis_number:int,color:str):
-        self.regis_number=regis_number
-        self.color=color
-class PaintStudio:
-    def paint(self,car,color):
-        car.color=color
+class People:
+    def __init__(self,name):
+        self.name=name
+    def __str__(self):
+        return "name is" + " "+self.name
+    def sing(self):
+        print(self.name+"hat")
 
-car1=Car(123,"red")
-print("this car is "+car1.color)
+    def show_info_person(self) :
+        print(f"ten: {self.name} ")
 
-paint_studio=PaintStudio()
-paint_studio.paint(car1,"Blue")
-print("this car now is in"+car1.color)
+class Room:
+    def __init__(self,name):
+        self.name=name
+        self.peopleList=[]
+    def adding(self,person):
+        self.peopleList.append(person)
+    def show_info(self):
+        for people in self.peopleList:
+            print(people)
+    def do_action(self):
+
+        # person.show_info()
+        for person in self.peopleList:
+            person.show_info_person()
+            for sing_action in range(10):
+                person.sing()
+
+
+
+
+
+vinh=People("vinh")
+mua=People("truynh")
+huy=People("huynh")
+
+first_room=Room("A33")
+first_room.adding(vinh)
+first_room.adding(mua)
+first_room.adding(huy)
+# first_room.show_info()
+# first_room.do_action()
+# vinh.show_info_person()
+# first_room.peopleList[0].show_info_person()
+# for person in first_room.peopleList:
+#     person.show_info()
+# for person in first_room.peopleList:
+    # person.show_info_person()
+first_room.do_action()
